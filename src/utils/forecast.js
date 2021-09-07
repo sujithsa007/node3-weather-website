@@ -27,7 +27,15 @@ const forecast = (latitude, longitude, callback) => {
             body.current.temperature +
             " fahrenheit out. It feels like " +
             body.current.feelslike +
-            " fahrenheit out"
+            " fahrenheit out with a precipitation of " +
+            body.current.precip +
+            ", humidity at " +
+            body.current.humidity +
+            "% and pressure of " +
+            body.current.pressure / 1000 +
+            " atm." +
+            "Last updated at " +
+            body.current.observation_time
         );
       }
     }
