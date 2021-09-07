@@ -31,14 +31,14 @@ app.get("", (req, res) => {
 });
 
 app.get("/about", (req, res) => {
-  res.render("about", { title: "About Me", name: "Aiswarya Sujith" });
+  res.render("about", { title: "About Me", name: "Sujith S A" });
 });
 
 app.get("/help", (req, res) => {
   res.render("help", {
     title: "Help",
     message: "This page is the helper page",
-    name: "Niranjan S A",
+    name: "Sujith S A",
   });
 });
 
