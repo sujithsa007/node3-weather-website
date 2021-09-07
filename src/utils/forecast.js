@@ -22,19 +22,21 @@ const forecast = (latitude, longitude, callback) => {
         const data = body;
         callback(
           undefined,
-          body.current.weather_descriptions[0] +
-            ". It is currently " +
+
+          "It is currently " +
+            body.current.weather_descriptions[0] +
+            " with a temperature of " +
             body.current.temperature +
-            " fahrenheit out. It feels like " +
+            " °C, which feels like " +
             body.current.feelslike +
-            " fahrenheit out with a precipitation of " +
+            " °C, with a precipitation of " +
             body.current.precip +
-            ", humidity at " +
+            ", humidity " +
             body.current.humidity +
-            "% and pressure of " +
-            body.current.pressure / 1000 +
+            "% and pressure at " +
+            (body.current.pressure / 1000).toFixed(2) +
             " atm." +
-            " Last updated at " +
+            " This information was last updated at " +
             body.current.observation_time
         );
       }
