@@ -34,7 +34,7 @@ const forecast = (latitude, longitude, callback) => {
             "% and pressure of " +
             body.current.pressure / 1000 +
             " atm." +
-            "Last updated at " +
+            " Last updated at " +
             body.current.observation_time
         );
       }
